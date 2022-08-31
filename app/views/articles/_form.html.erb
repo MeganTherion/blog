@@ -16,9 +16,10 @@ article.errors.full_messages_for(:title).each do |message| %>
   <% end %>
 </div>
 <div>
-    <%= form.label :status %><br>
-    <%= form.select :status, ['public', 'privaate', 'aarchived'], selected: 'public' %>
+  <%= form.label :status %><br>
+  <%= form.select :status, ['public', 'private', 'archived'], selected: 'public' %>
 </div>
+
 
 <div>
     <%= form.submit %>
