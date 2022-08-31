@@ -10,10 +10,14 @@ article.errors.full_messages_for(:title).each do |message| %>
 
 <div>
   <%= form.label :body %><br>
-  <%= form.text_aarea :body %><br>
+  <%= form.text_area :body %><br>
   <% article.errors.full_messages_for(:body).each do |message| %>
     <div><%= message %></div>
   <% end %>
+</div>
+<div>
+    <%= form.label :status %><br>
+    <%= form.select :status, ['public', 'privaate', 'aarchived'], selected: 'public' %>
 </div>
 
 <div>
